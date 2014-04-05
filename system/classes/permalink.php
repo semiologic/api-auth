@@ -34,7 +34,7 @@ class permalink
 				? ( '?' . ( is_array($query) ? http_build_query($query) : $query ) )
 				: ''
 				);
-		
+
 		return $url;
 	} # get()
 
@@ -49,6 +49,8 @@ class permalink
 
 		if ( isset($location) )
 		{
+			session_write_close();
+
 			if ( is_array($location) )
 			{
 				$location = permalink::get($location);

@@ -14,7 +14,7 @@ class ob
 
 	public static function start()
 	{
-		ob_start(array('ob', 'on_flush'));
+		ob_start(array('ob', 'on_ob_flush'));
 
 		# Start debug mode
 

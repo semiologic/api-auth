@@ -23,10 +23,10 @@ $request = explode('/', $request);
 switch ( sizeof($request) ) {
 case 1:
 	$api_key = array_pop($request);
-	
+
 	if ( preg_match("/^[0-9a-f]{32}$/i", $api_key) )
 		break;
-	
+
 default:
 	status_header(400);
 	die;
@@ -55,6 +55,8 @@ if ( !$success ) {
 }
 
 $cookies[session_name()] = session_id();
+
+session_write_close();
 
 status_header(200);
 header('Content-Type: text/plain; Charset: UTF-8');
