@@ -18,7 +18,7 @@ class active_user
 
 	public static function init()
 	{
-		self::$captions =& new captions;
+		self::$captions = new captions;
 
 		self::$user =& session::get('active_user');
 	} # init()

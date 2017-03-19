@@ -17,8 +17,8 @@ class session
 
 	public static function init()
 	{
-		self::$captions =& new captions;
-
+		self::$captions = new captions;
+		
 		$some_name = session_name("semiologic");
 		if ( $_SERVER['HTTP_HOST'] != 'localhost' ) {
 			ini_set('session.cookie_domain', '.semiologic.com');

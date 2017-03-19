@@ -19,7 +19,7 @@ class dict
 	# load()
 	#
 
-	function load($context)
+	public static function load($context)
 	{
 		if ( !isset(self::$captions[$context]) )
 		{

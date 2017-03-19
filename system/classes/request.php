@@ -155,7 +155,7 @@ class request
 			$this->exec();
 		}
 
-		$template =& new template($this);
+		$template = new template($this);
 		$template->output($this->args);
 	} # __construct()
 

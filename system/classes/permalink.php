@@ -17,7 +17,7 @@ class permalink
 
 	public static function init()
 	{
-		self::$captions =& new captions;
+		self::$captions = new captions;
 	} # init()
 
 
@@ -34,7 +34,7 @@ class permalink
 				? ( '?' . ( is_array($query) ? http_build_query($query) : $query ) )
 				: ''
 				);
-
+		
 		return $url;
 	} # get()
 

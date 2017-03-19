@@ -64,7 +64,7 @@ class ob
 
 	# Register ob_flush hook
 
-	function on_ob_flush($buffer)
+	public static function on_ob_flush($buffer)
 	{
 		new event('ob_flush', $buffer);
 
